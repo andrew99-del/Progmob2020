@@ -33,11 +33,11 @@ public class MahasiswaGetAllActivity extends AppCompatActivity {
 
         rvMhs = (RecyclerView)findViewById(R.id.rvGetMhsAll);
         pd = new ProgressDialog(this);
-        pd.setTitle("Hello");
+        pd.setTitle("72170093 Project");
         pd.show();
 
         GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
-        Call<List<Mahasiswa>> call = service.getMahasiswa("721170109");
+        Call<List<Mahasiswa>> call = service.getMahasiswa("721170093");
 
         call.enqueue(new Callback<List<Mahasiswa>>() {
             @Override
@@ -50,7 +50,7 @@ public class MahasiswaGetAllActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Mahasiswa>> call, Throwable t) {
                 pd.dismiss();
-                Toast.makeText(MahasiswaGetAllActivity.this, "Error", Toast.LENGTH_LONG);
+                Toast.makeText(MahasiswaGetAllActivity.this, "E R O R R", Toast.LENGTH_LONG);
 
             }
         });

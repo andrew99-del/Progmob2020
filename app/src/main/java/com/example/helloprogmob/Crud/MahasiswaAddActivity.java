@@ -37,7 +37,7 @@ public class MahasiswaAddActivity extends AppCompatActivity {
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd.setTitle("mohon menunggu");
+                pd.setTitle("mohon bersabar ini ujian");
                 pd.show();
 
                 GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
@@ -47,7 +47,7 @@ public class MahasiswaAddActivity extends AppCompatActivity {
                         edAlamat.getText().toString(),
                         edEmail.getText().toString(),
                         "Kosongkan Saja disini dirandom sistem",
-                        "72170109"
+                        "72170093"
 
 
 
@@ -56,13 +56,13 @@ public class MahasiswaAddActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
                         pd.dismiss();
-                        Toast.makeText( MahasiswaAddActivity.this, "DATA BERHASIL DISIMPAN",Toast.LENGTH_LONG).show();
+                        Toast.makeText( MahasiswaAddActivity.this, "Data sudah disimpan :)",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<DefaultResult> call, Throwable t) {
                         pd.dismiss();
-                        Toast.makeText(MahasiswaAddActivity.this, "GAGAL", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MahasiswaAddActivity.this, "Data tidak bisa di simpan :(", Toast.LENGTH_LONG).show();
 
                     }
                 });
